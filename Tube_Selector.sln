@@ -1,0 +1,26 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2005
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tube_Selector", "Tube_Selector.vcxproj", "{6F32C0B8-772B-48A4-AC5F-66B4611E27FB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3A1E5674-4657-4D2B-B496-EA2D6EAEA18F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6F32C0B8-772B-48A4-AC5F-66B4611E27FB}.Debug|Default.ActiveCfg = Debug|Win32
+		{6F32C0B8-772B-48A4-AC5F-66B4611E27FB}.Debug|Default.Build.0 = Debug|Win32
+		{6F32C0B8-772B-48A4-AC5F-66B4611E27FB}.Release|Default.ActiveCfg = Release|Win32
+		{6F32C0B8-772B-48A4-AC5F-66B4611E27FB}.Release|Default.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5603ED6D-1F51-48FD-96EB-9670AE543EA3}
+	EndGlobalSection
+EndGlobal
