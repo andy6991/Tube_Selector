@@ -134,4 +134,5 @@ public:
 	CEdit m_standart;
 	CEdit m_lambda;
 	HACCEL ha;
+	afx_msg void OnLvnItemchangedList1(NMHDR *pNMHDR, LRESULT *pResult);
 };
