@@ -13,7 +13,7 @@
 #undef APSTUDIO_READONLY_SYMBOLS
 
 /////////////////////////////////////////////////////////////////////////////
-// Russian (Russia) resources
+// Русский (Россия) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
 LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
@@ -70,7 +70,7 @@ IDR_MAINFRAME           ICON                    "res\\Tube_Selector.ico"
 // Dialog
 //
 
-IDD_TUBE_SELECTOR_DIALOG DIALOGEX 0, 0, 389, 262
+IDD_TUBE_SELECTOR_DIALOG DIALOGEX 0, 0, 347, 257
 STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
 EXSTYLE WS_EX_APPWINDOW
 CAPTION 
@@ -78,22 +78,22 @@ CAPTION
 MENU IDR_MENU1
 FONT 8, "MS Shell Dlg", 0, 0, 0x1
 BEGIN
-    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,56,178,154
-    CONTROL         "",IDC_LIST2,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,189,56,186,154
-    PUSHBUTTON      "Подбор",IDC_BUTTON_SELECT,69,223,50,14,BS_CENTER | NOT WS_VISIBLE,WS_EX_STATICEDGE
-    EDITTEXT        IDC_EDIT_ROD_NUMBER,241,225,40,14,ES_AUTOHSCROLL,WS_EX_STATICEDGE
-    GROUPBOX        "Изменение площади стержня",IDC_STATIC,189,211,186,40
-    PUSHBUTTON      "+",IDC_BUTTON_ADD,287,225,37,14,0,WS_EX_STATICEDGE
-    PUSHBUTTON      "-",IDC_BUTTON_SUBSTRACT,324,225,37,14,0,WS_EX_STATICEDGE
-    LTEXT           "№ стержня",IDC_STATIC,199,227,40,8
-    LTEXT           "Стандарт",IDC_STATIC,28,32,34,8
-    LTEXT           "Имя файла сортамента",IDC_STATIC,7,21,78,8
-    LTEXT           "Имя файла",IDC_STATIC,29,8,37,8
-    EDITTEXT        IDC_EDIT_FILE_NAME,89,7,116,12,ES_AUTOHSCROLL
-    EDITTEXT        IDC_EDIT_SORTAMENT_FILE_NAME,89,19,116,12,ES_AUTOHSCROLL
-    EDITTEXT        IDC_EDIT_STANDART,89,31,116,12,ES_AUTOHSCROLL
-    EDITTEXT        IDC_EDIT_LAMBDA,282,19,27,15,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
-    CONTROL         IDB_BITMAP1,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE,261,19,17,14,WS_EX_STATICEDGE
+    CONTROL         "",IDC_LIST2,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,153,56,164,154
+    EDITTEXT        IDC_EDIT_ROD_NUMBER,205,223,40,14,ES_AUTOHSCROLL,WS_EX_STATICEDGE
+    GROUPBOX        "Изменение площади стержня",IDC_STATIC,153,210,164,40
+    PUSHBUTTON      "+",IDC_BUTTON_ADD,243,222,37,16,0,WS_EX_STATICEDGE
+    PUSHBUTTON      "-",IDC_BUTTON_SUBSTRACT,280,222,37,16,0,WS_EX_STATICEDGE
+    LTEXT           "№ стержня",IDC_STATIC,160,226,40,8
+    LTEXT           "Стандарт",IDC_STATIC,29,32,36,8
+    LTEXT           "Имя файла сортамента",IDC_STATIC,8,19,78,8
+    LTEXT           "Имя файла",IDC_STATIC,29,7,37,8
+    EDITTEXT        IDC_EDIT_FILE_NAME,95,7,116,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_SORTAMENT_FILE_NAME,95,19,116,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_STANDART,95,31,116,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_LAMBDA,291,19,26,15,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    CONTROL         IDB_BITMAP1,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE,270,19,18,15,WS_EX_STATICEDGE
+    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,8,56,115,154
+    PUSHBUTTON      "Подбор",IDC_BUTTON_SELECT,73,222,50,14,BS_CENTER | NOT WS_VISIBLE,WS_EX_STATICEDGE
 END
 
 HIDD_DIALOG1 DIALOGEX 0, 0, 256, 194
@@ -116,10 +116,19 @@ GUIDELINES DESIGNINFO
 BEGIN
     IDD_TUBE_SELECTOR_DIALOG, DIALOG
     BEGIN
-        LEFTMARGIN, 7
-        RIGHTMARGIN, 382
+        LEFTMARGIN, 8
+        RIGHTMARGIN, 335
+        VERTGUIDE, 29
+        VERTGUIDE, 58
+        VERTGUIDE, 86
+        VERTGUIDE, 123
+        VERTGUIDE, 153
+        VERTGUIDE, 270
+        VERTGUIDE, 287
+        VERTGUIDE, 304
+        VERTGUIDE, 324
         TOPMARGIN, 7
-        BOTTOMMARGIN, 255
+        BOTTOMMARGIN, 250
     END
 
     HIDD_DIALOG1, DIALOG
@@ -205,6 +214,17 @@ IDR_HTML1               HTML                    "res\\html1.htm"
 
 /////////////////////////////////////////////////////////////////////////////
 //
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_TUBE_SELECTOR_DIALOG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
 // String Table
 //
 
@@ -213,12 +233,12 @@ BEGIN
     ID_BUTTON32779          "Sub menu 1\nSub menu 1"
 END
 
-#endif    // Russian (Russia) resources
+#endif    // Русский (Россия) resources
 /////////////////////////////////////////////////////////////////////////////
 
 
 /////////////////////////////////////////////////////////////////////////////
-// Neutral (Sys. Default) resources
+// Нейтральный (по умолчанию используемый системой)  resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEUSD)
 LANGUAGE LANG_NEUTRAL, SUBLANG_SYS_DEFAULT
@@ -234,9 +254,9 @@ STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSM
 CAPTION "О программе"
 FONT 8, "MS Shell Dlg", 0, 0, 0x1
 BEGIN
-    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,21,20
     LTEXT           "Tube_Selector версия от 31.10.2017",IDC_STATIC,40,10,132,8,SS_NOPREFIX
-    LTEXT           "Copyright (C) 2017",IDC_STATIC,41,42,119,8
+    LTEXT           "Copyright (C) 2017",IDC_STATIC,39,42,119,8
     DEFPUSHBUTTON   "OK",IDOK,178,3,50,16,WS_GROUP
     LTEXT           "Автор: Рябинина Виктория, Певалкин Андрей, Трохимчук Евгений",IDC_STATIC,40,21,188,18
 END
@@ -270,12 +290,12 @@ BEGIN
     0
 END
 
-#endif    // Neutral (Sys. Default) resources
+#endif    // Нейтральный (по умолчанию используемый системой)  resources
 /////////////////////////////////////////////////////////////////////////////
 
 
 /////////////////////////////////////////////////////////////////////////////
-// English (United States) resources
+// Английский (США) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
 LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
@@ -331,7 +351,7 @@ BEGIN
     IDS_ABOUTBOX            "&About Tube_Selector..."
 END
 
-#endif    // English (United States) resources
+#endif    // Английский (США) resources
 /////////////////////////////////////////////////////////////////////////////
 
 

@@ -102,6 +102,7 @@ BEGIN_MESSAGE_MAP(CTube_SelectorDlg, CDialog)
 	ON_BN_CLICKED(IDC_BUTTON_ADD, OnBnClickedButtonAdd)
 	ON_BN_CLICKED(IDC_BUTTON_SUBSTRACT, OnBnClickedButtonSubstract)
 
+	ON_NOTIFY(LVN_ITEMCHANGED, IDC_LIST1, &CTube_SelectorDlg::OnLvnItemchangedList1)
 END_MESSAGE_MAP()
 
 
@@ -327,18 +328,18 @@ void CTube_SelectorDlg::OnTimer(UINT nIDEvent)
 				m_ListCtrl1.GetClientRect(&rect);
 				int nColInterval = rect.Width()/7;    // состоит из 3-х столбцов
 
-				m_ListCtrl1.InsertColumn(0, _T("№"), LVCFMT_LEFT, 3*nColInterval/4);						
-				m_ListCtrl1.InsertColumn(1, _T("Зад. площади"), LVCFMT_LEFT, 5*nColInterval/2);						
-				m_ListCtrl1.InsertColumn(2, _T("Необх. моменты инерции"), LVCFMT_LEFT, rect.Width()-5*nColInterval/2-nColInterval*3/4);
+				m_ListCtrl1.InsertColumn(0, _T("№"), LVCFMT_LEFT, nColInterval);						
+				m_ListCtrl1.InsertColumn(1, _T("Площади"), LVCFMT_LEFT, 5*nColInterval/2);						
+				m_ListCtrl1.InsertColumn(2, _T("Мом.Инерции"), LVCFMT_LEFT, 3.5*nColInterval);
 
 				rect = 0;
 				m_ListCtrl2.GetClientRect(&rect);
 				nColInterval = rect.Width()/4;    // состоит из 4-и столбцов
 
-				m_ListCtrl2.InsertColumn(0, _T("№"), LVCFMT_LEFT, nColInterval-rect.Width()/8);    
-				m_ListCtrl2.InsertColumn(1, _T("Размеры"), LVCFMT_LEFT, nColInterval);   
-				m_ListCtrl2.InsertColumn(2, _T("Площади"), LVCFMT_LEFT, nColInterval);   
-				m_ListCtrl2.InsertColumn(3, _T("Моменты инерции"), LVCFMT_LEFT, rect.Width()-2*nColInterval-(nColInterval-rect.Width()/8)); 
+				m_ListCtrl2.InsertColumn(0, _T("№"), LVCFMT_LEFT, 0.5*nColInterval);    
+				m_ListCtrl2.InsertColumn(1, _T("Размеры"), LVCFMT_LEFT, 1.2*nColInterval);   
+				m_ListCtrl2.InsertColumn(2, _T("Площади"), LVCFMT_LEFT, 1.1*nColInterval);   
+				m_ListCtrl2.InsertColumn(3, _T("М. инерции"), LVCFMT_LEFT, 1.2*nColInterval);
 
 				b_List1 = true;
 			}
@@ -1227,3 +1228,11 @@ void CTube_SelectorDlg::OnBnClickedCancel() {	OnCancel(); }
 
 
 
+
+
+void CTube_SelectorDlg::OnLvnItemchangedList1(NMHDR *pNMHDR, LRESULT *pResult)
+{
+	LPNMLISTVIEW pNMLV = reinterpret_cast<LPNMLISTVIEW>(pNMHDR);
+	// TODO: добавьте свой код обработчика уведомлений
+	*pResult = 0;
+}
