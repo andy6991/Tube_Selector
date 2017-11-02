@@ -652,15 +652,15 @@ void CTube_SelectorDlg::OpenFermaFile()
 
 	for(iTemp = 0; iTemp < Tube_SelectorInData.TotalRod * Tube_SelectorInData.LoadCase; iTemp = iTemp + 3)
 	{
-		if((abs(Tube_SelectorDebugData.NMIfile[iTemp+1]) >= abs(Tube_SelectorDebugData.NMIfile[iTemp])) && (abs(Tube_SelectorDebugData.NMIfile[iTemp+1]) > abs(Tube_SelectorDebugData.NMIfile[iTemp+2])))
+		if((fabs(Tube_SelectorDebugData.NMIfile[iTemp+1]) >= fabs(Tube_SelectorDebugData.NMIfile[iTemp])) && (fabs(Tube_SelectorDebugData.NMIfile[iTemp+1]) >= fabs(Tube_SelectorDebugData.NMIfile[iTemp+2])))
 		{
-			Tube_SelectorInData.NesMoment[iTemp/3] = (float)abs(Tube_SelectorDebugData.NMIfile[iTemp+1]);
+			Tube_SelectorInData.NesMoment[iTemp/3] = fabs(Tube_SelectorDebugData.NMIfile[iTemp+1]);
 		}
-		else if((abs(Tube_SelectorDebugData.NMIfile[iTemp+2]) >= abs(Tube_SelectorDebugData.NMIfile[iTemp])) && (abs(Tube_SelectorDebugData.NMIfile[iTemp+2]) > abs(Tube_SelectorDebugData.NMIfile[iTemp+1])))
+		else if((fabs(Tube_SelectorDebugData.NMIfile[iTemp+2]) >= fabs(Tube_SelectorDebugData.NMIfile[iTemp])) && (fabs(Tube_SelectorDebugData.NMIfile[iTemp+2]) >= fabs(Tube_SelectorDebugData.NMIfile[iTemp+1])))
 		{
-			Tube_SelectorInData.NesMoment[iTemp/3] = (float)abs(Tube_SelectorDebugData.NMIfile[iTemp+2]);
+			Tube_SelectorInData.NesMoment[iTemp/3] = fabs(Tube_SelectorDebugData.NMIfile[iTemp+2]);
 		}
-		else  Tube_SelectorInData.NesMoment[iTemp/3] = (float)abs((float)Tube_SelectorDebugData.NMIfile[iTemp]);
+		else  Tube_SelectorInData.NesMoment[iTemp/3] = fabs(Tube_SelectorDebugData.NMIfile[iTemp]);
 	}
 
 	//	Заполнение таблицы входных данных

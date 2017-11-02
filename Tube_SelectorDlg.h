@@ -3,7 +3,6 @@
 
 #pragma once
 
-
 #include "MMTube_Selector.h"
 #include <afxwin.h>
 #include <stdio.h>

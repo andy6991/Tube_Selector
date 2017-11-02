@@ -1,3 +1,4 @@
+#include "stdafx.h"
 #include "MMTube_Selector.h"
 #include <memory.h>
 #include <stdio.h>
