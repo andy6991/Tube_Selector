@@ -24,6 +24,7 @@
 #define IDC_EDIT_SORTAMENT_FILE_NAME    1007
 #define IDC_EDIT_ROD_NUM                1007
 #define IDC_EDIT_STANDART               1008
+#define IDC_EDIT_SORTAMENT_FILE_NAME2   1008
 #define IDC_EDIT_LAMBDA                 1009
 #define IDC_BUTTON1                     1012
 #define ID_FILE_OPEN32771               32771
@@ -47,7 +48,7 @@
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        143
 #define _APS_NEXT_COMMAND_VALUE         32790
-#define _APS_NEXT_CONTROL_VALUE         1014
+#define _APS_NEXT_CONTROL_VALUE         1015
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
 #endif
